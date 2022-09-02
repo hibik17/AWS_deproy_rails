@@ -1,0 +1,29 @@
+<div>
+  <div class='w-full flex'>
+    <%# top content image %>
+    <div class='object-contain h-[520px] w-[520px]'>
+      <%= image_tag 'top.png' %>
+    </div>
+
+    <%# top content title %>
+    <div class='px-3 py-[30px]'>
+      <p class='font-thin text-5xl text-black pt-10'>
+        welcome to
+        <%= render 'serviseName' %>
+      </p>
+      <%# top content %>
+      <p class='py-10 font-thin text-center tracking-wide leading-6'>
+        <span class=''>
+        <br />
+        このサイトでは、旅行先の支払いを登録しておくことで
+        <br />
+        面倒な精算を一度に済ませることができます。
+      </p>
+
+      <%# sign_in_page && teams page %>
+      <%= link_to '/', class: 'w-full flex justify-center pt-[20px]' do %>
+        <span class='btn px-4 border border-blue-300 py-2 text-white rounded-md text-blue-300'>Start</span>
+      <% end %>
+    </div>
+  </div>
+</div>
