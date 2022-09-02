@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'
   }
+
+  get 'docs' => 'homes#docs', as: 'docs'
 end
