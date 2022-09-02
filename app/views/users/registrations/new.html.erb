@@ -1,10 +1,24 @@
-<div class="h-screen w-screen flex justify-center items-center">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <div class='w-[400px] h-[600px] bg-gray-700'>
-      <%= f.text_field :name, autocomplete: 'user name', autofocus: true %>
-      <%= f.email_field :email, autocomplete: 'user email', autofocus: true %>
-      <%= f.password_field :password, autocomplete: 'password', autofocus: true %>
-      <%= f.password_field :password_confirmation, autocomplete: 'password', autofocus: true %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class="bg-grey-lighter flex flex-col">
+    <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+      <div class="w-full bg-white px-6 py-2 rounded shadow-md text-black w-full">
+        <h1 class="mb-8 text-3xl text-center text-blue-400">Sign up</h1>
+        <%= f.label :name, class: 'text-blue-400 text-sm' %>
+        <%= f.text_field :name, autocomplete: 'user name', autofocus: true, class: "block border border-grey-light w-full p-3 rounded mb-4"%>
+        <%= f.label :email, class: 'text-blue-400 text-sm' %>
+        <%= f.email_field :email, autocomplete: 'user email', autofocus: true, class: "block border border-grey-light w-full p-3 rounded mb-4" %>
+        <%= f.label :password, class: 'text-blue-400 text-sm' %>
+        <%= f.password_field :password, autocomplete: 'password', autofocus: true, class: "block border border-grey-light w-full p-3 rounded mb-4" %>
+        <%= f.label :password_confirmation, class: 'text-blue-400 text-sm' %>
+        <%= f.password_field :password_confirmation, autocomplete: 'password', autofocus: true, class: "block border border-grey-light w-full p-3 rounded mb-4" %>
+        <%= f.submit 'create', class: "w-[50%] mx-[25%] py-3 rounded border hover:bg-blue-400 hover:text-white shadow-sm border-blue-400 text-blue-400 hover:bg-green-dark focus:outline-none my-1"%>
+        <div class="text-grey-dark my-2 font-thin">
+          Already have an account?
+          <%= link_to new_user_session_path, class: "no-underline border-b border-blue text-blue" do%>
+              Log in
+          <% end %>
+        </div>
+      </div>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
