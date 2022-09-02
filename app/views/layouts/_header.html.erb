@@ -30,16 +30,16 @@
       </a>
     </div>
     <div class='mr-8'>
-      <% if @user.present? %>
+      <% if current_user %>
         <span class="inline-block text-sm px-4 py-2 leading-none border rounded text-blue-400 border-blue-400 hover:border-transparent hover:bg-blue-400 hover:text-white mt-4 lg:mt-0">
-          <%= link_to 'Sign in', url: '/' %>
-        </span>
-        <span class="inline-block text-sm px-4 py-2 leading-none border rounded text-blue-400 border-blue-400 hover:border-transparent hover:bg-blue-400 hover:text-white mt-4 lg:mt-0">
-          <%= link_to 'Sign up', url: '/' %>
+          <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
         </span>
       <% else %>
         <span class="inline-block text-sm px-4 py-2 leading-none border rounded text-blue-400 border-blue-400 hover:border-transparent hover:bg-blue-400 hover:text-white mt-4 lg:mt-0">
-          <%= link_to 'Log out', url: '/' %>
+          <%= link_to 'Sign in', new_user_session_path %>
+        </span>
+        <span class="inline-block text-sm px-4 py-2 leading-none border rounded text-blue-400 border-blue-400 hover:border-transparent hover:bg-blue-400 hover:text-white mt-4 lg:mt-0">
+          <%= link_to 'Sign up', new_user_registration_path %>
         </span>
       <% end %>
     </div>
