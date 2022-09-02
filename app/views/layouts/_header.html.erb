@@ -1,0 +1,47 @@
+<nav class="flex items-center justify-between flex-wrap p-6">
+
+  <%# logo display %>
+  <div class="flex items-center flex-no-shrink text-cream mr-8 ml-10">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-sky-400">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 7.5l3 4.5m0 0l3-4.5M12 12v5.25M15 12H9m6 3H9m12-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <span class="font-semibold text-xl tracking-tight">Wari <span class='text-blue-600'>Pal</span></span>
+  </div>
+
+  <%# link menu display%>
+  <div class="block lg:hidden">
+    <button class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
+      <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <title>Menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+      </svg>
+    </button>
+  </div>
+  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="text-sm lg:flex-grow text-gray-400">
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
+        Docs
+      </a>
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
+        User
+      </a>
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
+        Team
+      </a>
+    </div>
+    <div class='mr-8'>
+      <% if @user.present? %>
+        <span class="inline-block text-sm px-4 py-2 leading-none border rounded text-blue-400 border-blue-400 hover:border-transparent hover:bg-blue-400 hover:text-white mt-4 lg:mt-0">
+          <%= link_to 'Sign in', url: '/' %>
+        </span>
+        <span class="inline-block text-sm px-4 py-2 leading-none border rounded text-blue-400 border-blue-400 hover:border-transparent hover:bg-blue-400 hover:text-white mt-4 lg:mt-0">
+          <%= link_to 'Sign up', url: '/' %>
+        </span>
+      <% else %>
+        <span class="inline-block text-sm px-4 py-2 leading-none border rounded text-blue-400 border-blue-400 hover:border-transparent hover:bg-blue-400 hover:text-white mt-4 lg:mt-0">
+          <%= link_to 'Log out', url: '/' %>
+        </span>
+      <% end %>
+    </div>
+  </div>
+</nav>
