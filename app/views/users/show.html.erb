@@ -1,7 +1,19 @@
 <div class='w-full max-h-screen'>
   <div class='w-full h-[87vh] bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 rounded-t-[500px]'>
-    <div class='ml-[650px] py-[20px]'>
-      <span class='font-bold text-5xl'><%= current_user.name %></span>
+    <div class='ml-[600px] py-[50px]'>
+      <div class="max-w-3xl mx-auto">
+        <div class="max-w-md bg-blue-500 rounded-lg hover:scale-125 duration-500 shadow-lg">
+          <div class="flex py-10 flex-col items-center pb-10">
+            <img class="mb-3 w-24 h-24 rounded-full shadow-lg" src="https://flowbite.com/docs/images/people/profile-picture-3.jpg" alt="Bonnie image">
+            <h3 class="mb-1 text-xl font-medium text-gray-900 dark:text-white"><%= current_user.name %></h3>
+            <span class="text-sm text-white">Visual Designer</span>
+            <div class="flex mt-4 space-x-3 lg:mt-6">
+              <p class="text-sm text-white ">money check: 10000 yen</p>
+              <p class="text-sm text-white ">teams: 10 teams</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <%= image_tag 'mypage.png', class: 'w-[450px] h-[500px] absolute bottom-0 left-0' %>
