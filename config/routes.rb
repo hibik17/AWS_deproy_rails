@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   }
 
   get 'docs' => 'homes#docs', as: 'docs'
+
+  get 'users/:id' => 'users#show', as: 'mypage'
 end

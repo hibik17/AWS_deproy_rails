@@ -1,5 +1,4 @@
 <nav class="flex items-center justify-between flex-wrap p-6">
-
   <%# logo display %>
   <%= link_to root_path, class: 'hover:cursor' do %>
     <div class="flex items-center flex-no-shrink text-cream mr-8 ml-10">
@@ -9,7 +8,6 @@
       <span class="font-semibold text-xl tracking-tight">Wari <span class='text-blue-600'>Pal</span></span>
     </div>
   <% end %>
-
   <%# link menu display%>
   <div class="block lg:hidden">
     <button class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
@@ -21,15 +19,17 @@
   </div>
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-sm lg:flex-grow text-gray-400">
-      <%= link_to docs_path, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4" do%>
+      <%= link_to docs_path, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4" do %>
         Docs
       <% end %>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-        User
-      </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-        Team
-      </a>
+      <% if current_user %>
+        <%= link_to mypage_path(current_user.id), class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4" do%>
+          User
+        <% end %>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
+          Team
+        </a>
+      <% end %>
     </div>
     <div class='mr-8'>
       <% if current_user %>
