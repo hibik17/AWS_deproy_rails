@@ -1,4 +1,8 @@
 <div class='w-full max-h-screen'>
-  <div class='w-full h-[87vh] bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 rounded-t-[500px]'></div>
-  <%= image_tag 'mypage.png', class: 'w-[450px] h-[500px] absolute top-4 left-4' %>
+  <div class='w-full h-[87vh] bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 rounded-t-[500px]'>
+    <div class='ml-[650px] py-[20px]'>
+      <span class='font-bold text-5xl'><%= current_user.name %></span>
+    </div>
+  </div>
+  <%= image_tag 'mypage.png', class: 'w-[450px] h-[500px] absolute bottom-0 left-0' %>
 </div>
