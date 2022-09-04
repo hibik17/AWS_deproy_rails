@@ -7,15 +7,14 @@ class GroupsController < ApplicationController
 
   def create
     group = Group.new(group_params)
+    group.owner_id = current_user.id
     group.save!
     redirect_to groups_path
   end
 
   def index
-    @group = Group.new
     @groups = Group.all
   end
-
 
   def edit; end
 

@@ -7,9 +7,9 @@
             <img class="mb-3 w-24 h-24 rounded-full shadow-lg" src="https://flowbite.com/docs/images/people/profile-picture-3.jpg" alt="Bonnie image">
             <h3 class="mb-1 text-xl font-medium text-gray-900 dark:text-white"><%= @user.name %></h3>
             <span class="text-sm text-white">Visual Designer</span>
-            <div class="mt-4 space-x-3 lg:mt-6 text-white">
+            <div class="mt-4 space-x-3 lg:mt-6 text-white inline-flex">
               <p class="text-md text-white m-2"><span class="material-icons mr-2">groups_3</span>10 teams</p>
-              <p class="text-md text-white m-2"><span class="material-icons pt-1 mr-2">description</span><%= @user.description %></p>
+              <p class="text-md text-white m-2"><span class="material-icons pt-1 mr-2 text-ellipsis">description</span><%= @user.description %></p>
             </div>
           </div>
         </div>

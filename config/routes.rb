@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'users' => 'users#index', as: 'users'
   get 'users/:id' => 'users#show', as: 'mypage'
   get 'group/new' => 'groups#new', as: 'create_group'
+  get 'group/:id' => 'groups#show', as: 'group'
 
 
   # group

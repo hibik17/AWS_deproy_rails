@@ -19,17 +19,17 @@
   </div>
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-sm lg:flex-grow text-gray-400">
-      <%= link_to docs_path, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4" do %>
+      <%= link_to docs_path, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-gray-800 mr-4" do %>
         Docs
       <% end %>
       <% if current_user %>
-        <%= link_to mypage_path(current_user.id), class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4" do %>
+        <%= link_to mypage_path(current_user.id), class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-gray-800 mr-4" do %>
           Mypage
         <% end %>
-        <%= link_to users_path, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4" do %>
+        <%= link_to users_path, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-gray-800 mr-4" do %>
           Users
         <% end %>
-        <%= link_to groups_path, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4" do %>
+        <%= link_to groups_path, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-gray-800 mr-4" do %>
           Team
         <% end %>
       <% end %>
