@@ -11,8 +11,11 @@ Rails.application.routes.draw do
 
   get 'docs' => 'homes#docs', as: 'docs'
 
+  get 'users' => 'users#index', as: 'users'
   get 'users/:id' => 'users#show', as: 'mypage'
+  get 'group/new' => 'groups#new', as: 'create_group'
+
 
   # group
-  resouces :groups, only: %i[create update edit new]
+  resources :groups, only: %i[create update edit index]
 end

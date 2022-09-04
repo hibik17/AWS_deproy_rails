@@ -21,7 +21,7 @@ module Users
 
     # action for after sign in
     def after_sign_in_path_for(_resource)
-      '/docs'
+      mypage_path(current_user.id)
     end
     # protected
 

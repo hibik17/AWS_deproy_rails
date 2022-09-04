@@ -53,7 +53,7 @@ module Users
 
     # The path used after sign up.
     def after_sign_up_path_for(_resource)
-      '/docs'
+      mypage_path(current_user.id)
     end
 
     # The path used after sign up for inactive accounts.

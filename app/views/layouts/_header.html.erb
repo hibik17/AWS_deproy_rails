@@ -23,12 +23,15 @@
         Docs
       <% end %>
       <% if current_user %>
-        <%= link_to mypage_path(current_user.id), class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4" do%>
+        <%= link_to mypage_path(current_user.id), class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4" do %>
           Mypage
         <% end %>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
+        <%= link_to users_path, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4" do %>
+          Users
+        <% end %>
+        <%= link_to groups_path, class: "block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4" do %>
           Team
-        </a>
+        <% end %>
       <% end %>
     </div>
     <div class='mr-8'>
