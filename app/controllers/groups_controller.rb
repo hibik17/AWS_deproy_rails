@@ -20,6 +20,12 @@ class GroupsController < ApplicationController
 
   def update; end
 
+  def show
+    @group = Group.find(params[:id])
+    byebug
+    @group.group_users >> current_user if @group.group_users.include?(current_user)
+  end
+
   private
 
   def group_params
