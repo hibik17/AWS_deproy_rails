@@ -22,7 +22,6 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    byebug
     @group.group_users >> current_user if @group.group_users.include?(current_user)
   end
 

@@ -62,3 +62,8 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'devise'
 
 gem 'material_icons'
+
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
